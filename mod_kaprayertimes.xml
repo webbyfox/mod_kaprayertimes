@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="3.0" method="upgrade" client="site">
+	<name>KA Prayer Times</name>
+	<creationDate>11/12/2010</creationDate>
+	<author>Khawaib Ahmed</author>
+	<version>1.2.3</version>
+	<description><![CDATA[KA_PRAYER_TIMES_MODULE_INSTALLED_SUCCESSFULLY]]></description>
+	<files>
+		<filename module="mod_kaprayertimes">mod_kaprayertimes.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<filename>tmpl/table.php</filename>
+		<filename>tmpl/tablethree.php</filename>
+		<filename>tmpl/index.html</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_kaprayertimes.ini</language>
+		<language tag="ur-UR">ur-UR.mod_kaprayertimes.ini</language>
+	</languages>
+    
+	<params>
+        <param name="mosque" type="sql" default="" label="SELECT_MOSQUE" query="SELECT `id`, `name` FROM `#_kaprayertimes_mosques` WHERE `state` = 1 ORDER BY `ordering`"  key_field="id" value_field="name" />
+		<param name="layout" type="list" default="list" label="LAYOUT" description="LAYOUT_DESC">
+			<option value="table">VERTICAL</option>
+<!--			<option value="tablethree">HORIZONTAL</option>-->
+		</param>
+		<param name="showfirdayprayer" type="list" default="1" label="SHOWHFRIDAYPRAYER" description="SHOWHFRIDAYPRAYER_DESC">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</param>
+		<param name="firdayprayer_text" type="textarea" cols="35" default="Friday Prayer Time: " label="FRIDAYPRAYER_TEXT" description="FRIDAYPRAYER_TEXT_DESC" />
+		<param name="firdayprayer_time" type="textarea" cols="35" default="1.00pm" label="FRIDAYPRAYER_TIME" description="FRIDAYPRAYER_TIME_DESC" />
+    		
+		<param name="hyperlink" type="list" default="1" label="SHOWHYPERLINK" description="SHOWHYPERLINK_DESC">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</param>
+		<param name="hyperlink_text" type="textarea" cols="35" default="" label="HYPERLINK_TEXT" description="HYPERLINK_TEXT_DESC" />
+	</params>
+	<params group="advanced">
+		<param name="moduleclass_sfx" type="text" default="" label="MODULE_SUFFIX" description="MODULE_SUFFIX_DESC" />
+		<param name="cache" type="list" default="1" label="CACHING" description="CACHING_DESC">
+		<option value="1">USE_GLOBAL</option>
+		<option value="0">NO_CACHING</option>
+		</param>
+		<param name="cache_time" type="text" default="900" label="CACHE_TIME" description="CACHE_TIME_DESC" />
+    </params>
+    
+    <config>
+		<fields name="params">
+			<fieldset name="basic">
+                <field name="mosque" type="sql" default="" label="SELECT_MOSQUE" query="SELECT `id`, `name` FROM `#__kaprayertimes_mosques` WHERE `state` = 1 ORDER BY `ordering`"  key_field="id" value_field="name" />
+                <field name="layout" type="list" default="list" label="LAYOUT" description="LAYOUT_DESC">
+                    <option value="table">VERTICAL</option>
+        <!--			<option value="tablethree">HORIZONTAL</option>-->
+                </field>
+                <field name="showfirdayprayer" type="list" default="1" label="SHOWHFRIDAYPRAYER" description="SHOWHFRIDAYPRAYER_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="firdayprayer_text" type="textarea" cols="35" default="Friday Prayer Time: " label="FRIDAYPRAYER_TEXT" description="FRIDAYPRAYER_TEXT_DESC" />
+                <field name="firdayprayer_time" type="textarea" cols="35" default="1.00pm" label="FRIDAYPRAYER_TIME" description="FRIDAYPRAYER_TIME_DESC" />
+
+                <field name="hyperlink" type="list" default="1" label="SHOWHYPERLINK" description="SHOWHYPERLINK_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="hyperlink_text" type="textarea" cols="35" default="" label="HYPERLINK_TEXT" description="HYPERLINK_TEXT_DESC" />
+			</fieldset>
+            <fieldset name="advanced">
+                <field name="moduleclass_sfx" type="text" default="" label="MODULE_SUFFIX" description="MODULE_SUFFIX_DESC" />
+                <field name="cache" type="list" default="1" label="CACHING" description="CACHING_DESC">
+                <option value="1">USE_GLOBAL</option>
+                <option value="0">NO_CACHING</option>
+                </field>
+                <field name="cache_time" type="text" default="900" label="CACHE_TIME" description="CACHE_TIME_DESC" />
+            </fieldset>
+		</fields>
+	</config>
+</install>
