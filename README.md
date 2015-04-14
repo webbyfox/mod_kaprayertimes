@@ -1,3 +1,5 @@
+Author:Rizwan (mr.mansuri@gmail.com)
+
 Module for KA prayertimes 
 --------------------------
     Works with Joomla 3.4.1
