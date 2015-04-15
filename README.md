@@ -1,6 +1,6 @@
 Tested with:  Joomla 3.4.1<br/>
-Author:     Rizwan Mansuri<br/>
-Email:      support@webbyfox.co.uk<br/>
+Author: Rizwan Mansuri<br/>
+Email:  hello@webbyfox.co.uk<br/>
   
 
 
