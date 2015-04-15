@@ -1,4 +1,4 @@
-Tested with:  Joomla 3.4.1
+Tested with:  Joomla 3.4.1<br/>
 Author:     Rizwan Mansuri
 Email:      support@webbyfox.co.uk
   
