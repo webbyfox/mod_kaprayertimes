@@ -1,8 +1,11 @@
 Meta::
   
   Tested with:  Joomla 3.4.1
+  
   Author:     Rizwan Mansuri
+  
   Email:      support@webbyfox.co.uk
+  
 
 
 Module for KA prayertimes 
